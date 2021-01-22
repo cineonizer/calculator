@@ -1,0 +1,135 @@
+body {
+    font-family: Arial, Helvetica, sans-serif;
+}
+
+.main-container {
+    width: 335px;
+    height: 515px;
+    margin: 100px auto 0;
+    background-color: rgb(204, 204, 206);
+    border: 3px solid rgb(166, 167, 171);
+    border-radius: 10px;
+    user-select: none;
+}
+
+.close-button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-size: 2em;
+    width: 35px;
+    height: 35px;
+    margin: 10px 10px 10px auto;
+    border: 2px solid black;;
+    border-radius: 10px;
+}
+
+.display {
+    display: flex;
+    align-items: center;
+    justify-content: flex-end;
+    font-size: 2.5em;
+    width: 315px;
+    height: 65px;
+    margin: 10px auto;
+    background-color: white;
+    border-radius: 10px;
+}
+
+.display p1 {
+    margin: 10px;
+}
+
+.buttons-container {
+    width: 305px;
+    height: 298px;
+    margin: 0 auto;
+}
+
+.row {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    margin-bottom: 7px;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    width: 50px;
+    height: 50px;
+    font-size: 1.75em;
+    color: white;
+    border-radius: 10px;
+}
+
+.button:hover {
+    box-shadow: 1px 1px 10px 1px #aaaaaa;
+    transition: .1s ease-in-out;
+}
+
+.memory-button {
+    background-color: rgb(23, 63, 87);
+    border: 2px solid rgb(25, 63, 89);
+}
+
+.operator-button {
+    background-color: rgb(48, 106, 150);
+    border: 2px solid rgb(28, 77, 108);
+}
+
+.operator {
+    font-size: 2.5em;
+}
+
+.number-button {
+    color: black;
+    background-color: white;
+    border: 2px solid rgb(159, 161, 163);
+}
+
+.clear-button {
+    background-color: rgb(206, 107, 40);
+    border: 2px solid rgb(157, 63, 38);
+}
+
+.equal-button {
+    background-color: rgb(23, 63, 87);
+    border: 2px solid rgb(25, 63, 89);
+}
+
+.transfer-display {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 2.5em;
+    width: 315px;
+    height: 65px;
+    margin: 10px auto;
+    background-color: rgb(103, 104, 106);
+    border-radius: 10px;
+}
+
+.transfer-display:hover {
+    box-shadow: 1px 1px 10px 1px #aaaaaa;
+    transition: .1s ease-in-out;
+}
+
+.transfer-display p1 {
+    font-size: 90%;
+    color: white;
+}
+
+#radical {
+    position: relative;
+    top: 3.5px;
+    right: 1px;
+}
+
+#overline {
+    text-decoration: overline;
+    position: relative;
+    top: 5.5px;
+    right: 1.5px;
+}
