@@ -83,7 +83,7 @@ body {
     font-size: 2.5em;
 }
 
-.number-button {
+.number-button, .decimal-button {
     color: black;
     background-color: white;
     border: 2px solid rgb(159, 161, 163);
@@ -94,7 +94,7 @@ body {
     border: 2px solid rgb(157, 63, 38);
 }
 
-.equal-button {
+.equals-button {
     background-color: rgb(23, 63, 87);
     border: 2px solid rgb(25, 63, 89);
 }
@@ -133,3 +133,4 @@ body {
     top: 5.5px;
     right: 1.5px;
 }
+
