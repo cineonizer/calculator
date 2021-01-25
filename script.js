@@ -1,18 +1,22 @@
-const displayWindow = document.querySelector('.display p1');
+let inOperation = false;
 let isDecimal = false;
-let operator;
-let displayValue;
-let firstValue;
-let secondValue;
+let firstOperand;
+let secondOperand;
+let currentOperator;
 
-function getDisplay() {
-    const numberButton = document.querySelectorAll('.number-button');
-    const decimalButton = document.querySelector('.decimal-button');
+const displayWindow = document.querySelector('.display p1');
+const numberButton = document.querySelectorAll('.number-button');
+const decimalButton = document.querySelector('.decimal-button');
+const clearButton = document.querySelector('#clear');
+const operatorButton = document.querySelectorAll('.operator-button');
+const equalsButton = document.querySelector('.equals-button');
+
+function getOperand() {
     decimalButton.addEventListener('click', () => isDecimal = true);
     numberButton.forEach(numberButton => {
         numberButton.addEventListener('click', () => {
             if (!isDecimal) {
-                if (displayWindow.textContent === '0.') {
+                if (displayWindow.textContent === '0.' || inOperation) {
                     displayWindow.textContent = numberButton.textContent;
                 }
                 else {
@@ -24,66 +28,84 @@ function getDisplay() {
             else {
                 displayWindow.textContent += numberButton.textContent;
             }
-            displayValue = parseFloat(displayWindow.textContent);
         });
     });
 }
 
-function applyOperator() {
-    const addButton = document.querySelector('#add');
-    addButton.addEventListener('click', () => {
-        if (!firstValue) {
-            firstValue = displayValue;
-            reset();
-        }
-        else {
-            displayValue = parseFloat(displayWindow.textContent);
-            firstValue += displayValue;
-            displayWindow.textContent = firstValue;
-        }
-        operator = '+';
+function getOperator() {
+    operatorButton.forEach(operatorButton => {
+        operatorButton.addEventListener('click', () => {
+            currentOperator = operatorButton.textContent;
+            firstOperand = displayWindow.textContent;
+            isDecimal = false;
+            inOperation = true;
+        });
     });
+
 }
 
-function applyEquals() {
-    const equalsButton = document.querySelector('.equals-button');
+function evaluate() {
     equalsButton.addEventListener('click', () => {
-        secondValue = displayValue;
-        switch (operator) {
-            case '+':
-                let sum = firstValue + secondValue;
-                if (Number.isInteger(sum)) {
-                    displayWindow.textContent = firstValue + secondValue + '.';
-                }
-                break;
-            case '-':
-                return a - b;
-                break;
-            case '*':
-                return a * b;
-                break;
-            case '/':
-                return a / b;
-                break;
-        };
+        secondOperand = displayWindow.textContent;
+        displayWindow.textContent = getResult(currentOperator, firstOperand, secondOperand);
     });
 }
 
-function clearDisplay() {
-    const clearButton = document.querySelector('#clear');
+
+
+
+
+
+
+function getResult(operator, a, b) {
+    a = parseFloat(a);
+    b = parseFloat(b);
+    switch (operator) {
+        case '+':
+            let sum = a + b;
+            if (Number.isInteger(sum)) {
+                return displayWindow.textContent = sum + '.';
+            }
+            else {
+                return sum;
+            }
+            break;
+        case '−':
+            let difference = a - b;
+            if (Number.isInteger(difference)) {
+                return displayWindow.textContent = difference + '.';
+            }
+            else {
+                return difference;
+            }
+            break;
+        case '×':
+            return a * b;
+            break;
+        case '/':
+            return a / b;
+            break;
+    };
+}
+
+function getClear() {
     clearButton.addEventListener('click', () => {
         reset();
-        firstValue = 0;
-        secondValue = 0;
     });
 }
 
 function reset() {
     displayWindow.textContent = '0.';
+    inOperation = false;
     isDecimal = false;
+    firstOperand = 0;
+    secondOperand = 0;
 }
 
-getDisplay();
-applyOperator();
-applyEquals();
-clearDisplay();
+
+
+getOperand();
+getOperator();
+getResult();
+getClear();
+evaluate();
