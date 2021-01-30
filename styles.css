@@ -1,15 +1,16 @@
 body {
     font-family: Arial, Helvetica, sans-serif;
+    user-select: none;
+    text-align: center;
 }
 
 .main-container {
     width: 335px;
-    height: 515px;
-    margin: 100px auto 0;
+    height: 450px;
+    margin: 150px auto 0;
     background-color: rgb(204, 204, 206);
     border: 3px solid rgb(166, 167, 171);
     border-radius: 10px;
-    user-select: none;
 }
 
 .close-button {
@@ -42,7 +43,7 @@ body {
 
 .buttons-container {
     width: 305px;
-    height: 298px;
+    height: 237px;
     margin: 0 auto;
 }
 
@@ -62,6 +63,7 @@ body {
     font-size: 1.75em;
     color: white;
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .button:hover {
@@ -69,12 +71,7 @@ body {
     transition: .1s ease-in-out;
 }
 
-.memory-button {
-    background-color: rgb(23, 63, 87);
-    border: 2px solid rgb(25, 63, 89);
-}
-
-.operator-button {
+.operator-button, #plusmn, #radical {
     background-color: rgb(48, 106, 150);
     border: 2px solid rgb(28, 77, 108);
 }
@@ -106,9 +103,12 @@ body {
     font-size: 2.5em;
     width: 315px;
     height: 65px;
-    margin: 10px auto;
+    margin: 7px auto;
+    font-size: 2.25em;
+    color: white;
     background-color: rgb(103, 104, 106);
     border-radius: 10px;
+    cursor: pointer;
 }
 
 .transfer-display:hover {
@@ -116,12 +116,7 @@ body {
     transition: .1s ease-in-out;
 }
 
-.transfer-display p1 {
-    font-size: 90%;
-    color: white;
-}
-
-#radical {
+#radical-symbol {
     position: relative;
     top: 3.5px;
     right: 1px;
@@ -133,4 +128,3 @@ body {
     top: 5.5px;
     right: 1.5px;
 }
-
