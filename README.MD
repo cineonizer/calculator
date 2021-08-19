@@ -1,6 +1,6 @@
 # Calculator
 
-This is a project from the curriculum of [The Odin Project's Foundation Path](https://www.theodinproject.com/courses/foundations/lessons/calculator).
+This is the [Calculator](https://www.theodinproject.com/courses/foundations/lessons/calculator) project from the curriculum of [The Odin Project's Foundation Path](https://www.theodinproject.com/paths/foundations/courses/foundations).
 
 #### What is The Odin Project?
 
