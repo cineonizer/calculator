@@ -22,8 +22,6 @@ Program an on-screen calculator.
 
 ## Learning Outcomes
 
-* Used CSS Grids to display the cells.
-* More understanding of the organization of HTML elements.
-* Practiced more with DOM manipulation, and DOM methods, especially working multiple mouse EventListeners.
-* Familiarized myself with the Chrome developer tools.
-
+* Learned to never use eval() method to perform string arithmetic expressions as code vulnerability is compromised.
+* More practice with JavaScript and problem-solving. 
+* Used the Switch statement instead of a bunch of If else statements.
