@@ -25,3 +25,4 @@ Program an on-screen calculator.
 * Learned to never use eval() method to perform string arithmetic expressions as code vulnerability is compromised.
 * More practice with JavaScript and problem-solving. 
 * Used the Switch statement instead of a bunch of If else statements.
+* Learned the existence of HTML Entity codes.
