@@ -12,7 +12,7 @@ Click [here](https://cineonizer.github.io/calculator/) for a live preview of my 
 
 ## Goal
 
-Program an on-screen calculator.
+Program an on-screen calculator with basic functions.
 
 ## Built With
 
